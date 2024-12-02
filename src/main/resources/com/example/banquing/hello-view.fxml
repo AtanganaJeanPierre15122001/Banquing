@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.banquing.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" spacing="20.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.banquing.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <stylesheets>
+      <URL value="@Boostrap3.css" />
+      <URL value="@Darktheme.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="738.0" prefWidth="1377.0" styleClass="background">
+         <children>
+            <ImageView fitHeight="812.0" fitWidth="746.0" layoutX="527.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@banques-shutterstock_1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="-16.0" layoutY="43.0" styleClass="label-header" text="Bienvenue sur notre application de gestion d'une Banque">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="46.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="175.0" text="Que voulez vous effectuer?" />
+            <Pane layoutX="69.0" layoutY="286.0" prefHeight="296.0" prefWidth="411.0">
+               <children>
+                  <Button fx:id="Connection" layoutX="-5.0" layoutY="54.0" mnemonicParsing="false" onAction="#onHelloButtonClick" styleClass="success" text="Connection">
+                     <stylesheets>
+                        <URL value="@Boostrap3.css" />
+                        <URL value="@Darktheme.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button fx:id="Inscription" layoutX="218.0" layoutY="54.0" mnemonicParsing="false" onAction="#onHelloButtonClick" styleClass="info" text="Inscription">
+                     <stylesheets>
+                        <URL value="@Boostrap3.css" />
+                        <URL value="@Darktheme.css" />
+                     </stylesheets>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
 </VBox>
